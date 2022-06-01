@@ -1,2 +1,2 @@
-# exercicio_pipeline_aws_emr
+# Pipeline - AWS - EMR
 Trabalho Final - Disciplina: Preparação, Orquestração e Fluxo de Dados
