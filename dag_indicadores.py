@@ -54,7 +54,7 @@ def indicadores():
         waiter = client.get_waiter('step_complete')
 
         waiter.wait(
-            ClusterId="j-10NCLO6OLH3TD",
+            ClusterId=cluster_id,
             StepId=step_id,
             WaiterConfig={
                 'Delay': 10,
