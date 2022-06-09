@@ -33,6 +33,7 @@ def indicadores():
     def emr_process_market_basket(success_before: bool):
         if success_before:
             newstep = client.add_job_flow_steps(
+                print(cluster_id)
                 JobFlowId=cluster_id,
                 Steps=[{
                     'Name': 'Processa indicadores',
