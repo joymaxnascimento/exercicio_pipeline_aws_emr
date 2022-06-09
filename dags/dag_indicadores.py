@@ -9,10 +9,11 @@ aws_access_key_id = Variable.get('aws_access_key_id')
 aws_secret_access_key = Variable.get('aws_secret_access_key')
 cluster_id = Variable.get('cluster_id')
 python_file_job = Variable.get('python_file_job')
+region_name = Variable.get('region_name')
 
 client = boto3.client(
     'emr'
-    , region_name='us-east-2'
+    , region_name=region_name
     , aws_access_key_id=aws_access_key_id
     , aws_secret_access_key=aws_secret_access_key
 )
