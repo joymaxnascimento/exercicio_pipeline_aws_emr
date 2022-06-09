@@ -6,7 +6,7 @@ from datetime import datetime
 import boto3
 
 aws_access_key_id = Variable.get('aws_access_key_id')
-aws_secret_access_key = Variable.get('aws_access_key_id')
+aws_secret_access_key = Variable.get('aws_secret_access_key')
 cluster_id = Variable.get('cluster_id')
 python_file_job = Variable.get('python_file_job')
 
