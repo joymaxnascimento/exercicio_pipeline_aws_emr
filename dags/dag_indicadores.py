@@ -12,7 +12,7 @@ python_file_job = Variable.get('python_file_job')
 
 client = boto3.client(
     'emr'
-    , region_name='us-east-1'
+    , region_name='us-east-2'
     , aws_access_key_id=aws_access_key_id
     , aws_secret_access_key=aws_secret_access_key
 )
