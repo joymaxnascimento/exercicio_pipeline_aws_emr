@@ -22,7 +22,7 @@ default_args = {
     'start_date': datetime(2022, 4, 2)
 }
 
-@dag(default_args=default_args, schedule_interval='*/5 * * * *', description='Executa um job Spark no EMR.', catchup=False, tags=['spark','emr'])
+@dag(default_args=default_args, schedule_interval='*/15 * * * *', description='Executa um job Spark no EMR.', catchup=False, tags=['spark','emr'])
 def indicadores():
 
     @task
@@ -31,8 +31,6 @@ def indicadores():
     
     @task
     def emr_process_market_basket(success_before: bool):
-        print(cluster_id)
-        print(python_file_job)
         if success_before:
             newstep = client.add_job_flow_steps(
                 JobFlowId=cluster_id,
